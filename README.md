@@ -1,2 +1,2 @@
 # WhatsApi
-Java Version of https://github.com/nouman27/Chat-API
+Java Version of https://github.com/mgp25/Chat-API
