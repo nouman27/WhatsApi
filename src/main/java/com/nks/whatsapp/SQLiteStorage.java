@@ -20,6 +20,9 @@ public class SQLiteStorage implements WhatsAppStorage{
 	
 	@Override
 	public void initStorage() throws StorageException {
+		try{
+		Class.forName("org.sqlite.JDBC");
+		}catch(ClassNotFoundException cnfEx){throw new StorageException("Database driver class org.sqlite.JDBC not found, please check class path and make sure sqlite driver exists in it",cnfEx);}	
 	String url="jdbc:sqlite:"+storageFile;
 	Statement stmt=null;
 	try{

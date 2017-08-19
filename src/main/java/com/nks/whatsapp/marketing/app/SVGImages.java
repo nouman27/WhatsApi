@@ -21,7 +21,7 @@ public class SVGImages {
 	
 public static void loadImages() throws SAXException, IOException, ParserConfigurationException
 {
-Document doc=DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(SVGImages.class.getResourceAsStream("systemImages.svg"));	
+Document doc=DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(SVGImages.class.getResourceAsStream("/systemImages.svg"));	
 loadSingleNode(doc.getChildNodes().item(0));
 }
 

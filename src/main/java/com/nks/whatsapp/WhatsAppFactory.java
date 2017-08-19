@@ -1,5 +1,6 @@
 package com.nks.whatsapp;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +35,10 @@ public static void isPhoneNumberValid(String phoneNumber){
 		throw new RuntimeException("Phone number is invalid,Please remove preceeding 0s after country code");
 }
 public static void initStorage() throws StorageException{
-	storage=new SQLiteStorage("data.db");
+	String localEnv=System.getenv("APPDATA");
+	if(localEnv==null)
+		localEnv=System.getProperty("user.home");
+	storage=new SQLiteStorage(localEnv==null?"":localEnv+File.separator+"data.db");
 	getStorage();
 }
 static WhatsAppStorage getStorage() throws StorageException{
