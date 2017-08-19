@@ -1,2 +1,2 @@
 # WhatsApi
-Unofficial API for Whatsapp Using WhatsApp Web
+Java Version of https://github.com/nouman27/Chat-API
